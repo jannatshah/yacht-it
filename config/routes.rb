@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :yachts, except: :destroy do
     resources :bookings, only: [:new, :create]
   end
-    resources :bookings, only: [:show, :index]
+  resources :bookings, only: [:show, :index]
 end

@@ -1,3 +1,4 @@
+
 <%= simple_form_for [@yacht, @booking] do |f| %>
 
   <%= f.error_notification %>
@@ -7,6 +8,7 @@
     <%= f.input :start_date %>
     <%= f.input :end_date %>
     <%= f.input :number_of_guests %>
+    <%= f.input :value_of_booking %>
 
   <div class="form-actions">
     <%= f.button :submit %>

@@ -13,6 +13,8 @@ class BookingsController < ApplicationController
   end
 
   def new
+    # only so that simple form create the right route /yachts/12/bookings
+    @yacht = Yacht.find(params[:yacht_id])
     @booking = Booking.new
   end
 
@@ -20,8 +22,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @yacht = Yacht.find(params[:yacht_id])
     @booking.yacht = @yacht
+    @booking.user = current_user
     if @booking.save
-      redirect_to @yacht
+      redirect_to root_path
     else
       render :new
     end
