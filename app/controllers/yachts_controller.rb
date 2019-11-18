@@ -1,11 +1,10 @@
 class YachtsController < ApplicationController
+  before_action :find_yacht, only: [:show, :edit, :update]
   def index
     @yachts = Yacht.all
   end
 
-  def show
-    @yacht = Yacht.find(params[:id])
-  end
+  def show; end
 
   def new
     @yacht = Yacht.new
@@ -20,9 +19,7 @@ class YachtsController < ApplicationController
     end
   end
 
-  def edit
-    @yacht = Yacht.find(params[:id])
-  end
+  def edit; end
 
   def update
     if @yacht.update(yacht_params)
@@ -37,5 +34,9 @@ class YachtsController < ApplicationController
   def yacht_params
     params.require(:yacht)
           .permit(:name, :location, :capacity, :description, :price_per_night)
+  end
+
+  def find_yacht
+    @yacht = Yacht.find(params[:id])
   end
 end

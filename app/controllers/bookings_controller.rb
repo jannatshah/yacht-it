@@ -24,7 +24,7 @@ class BookingsController < ApplicationController
     @booking.yacht = @yacht
     @booking.user = current_user
     if @booking.save
-      redirect_to root_path
+      redirect_to @booking
     else
       render :new
     end
