@@ -1,5 +1,6 @@
 <h1>See all available yachts</h1>
 
 <% @yachts.each do |yacht| %>
-  <%= yacht.name %>
+ <%= yacht.name %>
+ <%= link_to 'More info', yacht_path(yacht) %>
 <% end %>
