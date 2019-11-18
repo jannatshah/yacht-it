@@ -1,0 +1,9 @@
+<h1><%= @yacht.name %></h1>
+<h3><%= @yacht.description %></h3>
+
+<p>Location: <%= @yacht.location %></p>
+<p>Capacity (people): <%= @yacht.capacity %></p>
+<p>Price per night (£): <%= @yacht.price_per_night %></p>
+
+<%= link_to 'Edit', edit_yacht_path(@yacht) %>
+<%= link_to 'Back to yachts', yachts_path %>
