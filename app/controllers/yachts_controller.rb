@@ -1,4 +1,5 @@
 class YachtsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :find_yacht, only: [:show, :edit, :update]
   def index
     @yachts = Yacht.all
