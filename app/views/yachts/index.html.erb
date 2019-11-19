@@ -9,14 +9,14 @@
           <% else %>
             <img src="https://www.latinexcursions.com/wp-content/uploads/2018/06/infinity3-.jpg" alt="" class="card-img">
           <% end %>
-          <div class="card-info h-100 p-3">
+          <div class="card-info px-3 py-2">
             <div class="card-info-row">
               <span class="m-0"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
               <p class="fas fa-child m-0"> <%= yacht.capacity %></p>
             </div>
-            <div class="card-info-row mt-3">
-              <h3 class="m-0"><%= yacht.name %></h3>
-            </div>
+            <!-- <div class="card-info-row mt-2"> -->
+              <h3 class="my-2"><%= yacht.name %></h3>
+            <!-- </div> -->
           </div>
           <div class="price">
             <p>$<%= yacht.price_per_night %></p>
