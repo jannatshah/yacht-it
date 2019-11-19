@@ -2,10 +2,10 @@
 <div class="cards">
   <!-- <div class=""> -->
     <% @yachts.each do |yacht| %>
-      <%= link_to yacht_path(yacht), class: "card" do %>
+       <%= link_to yacht_path(yacht), class: "card" do %>
         <div>
-          <% if yacht.photo.attached? %>
-            <%= cl_image_tag yacht.photo.key, height: 200, width: 300, crop: :fill, class: "card-img" %>
+          <% if yacht.photos.any? %>
+            <%= cl_image_tag yacht.photos.first.key, height: 200, width: 300, crop: :fill, class: "card-img" %>
           <% else %>
             <img src="https://www.latinexcursions.com/wp-content/uploads/2018/06/infinity3-.jpg" alt="" class="card-img">
           <% end %>

@@ -4,5 +4,5 @@ class Yacht < ApplicationRecord
   validates :capacity, presence: true
   validates :location, presence: true
   validates :price_per_night, presence: true
-  has_one_attached :photo
+  has_many_attached :photos
 end
