@@ -14,8 +14,8 @@ class YachtsController < ApplicationController
   def create
     @yacht = Yacht.new(yacht_params)
     if @yacht.save
-      @yacht.photo.purge
-      @yacht.photo.attach(params.dig(:yacht, :photo))
+      # @yacht.photos.purge
+      # @yacht.photos.attach(params.dig(:yacht, photos: []))
       redirect_to @yacht
     else
       render :new
@@ -26,8 +26,8 @@ class YachtsController < ApplicationController
 
   def update
     if @yacht.update(yacht_params)
-      @yacht.photo.purge
-      @yacht.photo.attach(params.dig(:yacht, :photo))
+      # @yacht.photos.purge
+      # @yacht.photos.attach(params.dig(:yacht, photos: []))
       redirect_to @yacht
     else
       render :edit
@@ -37,7 +37,7 @@ class YachtsController < ApplicationController
   private
 
   def yacht_params
-    params.require(:yacht).permit(:name, :location, :capacity, :description, :price_per_night)
+    params.require(:yacht).permit(:name, :location, :capacity, :description, :price_per_night, photos: [])
   end
 
   def find_yacht
