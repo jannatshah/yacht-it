@@ -32,3 +32,4 @@ end
 gem 'devise'
 gem 'validates_timeliness', '~> 5.0.0.alpha3'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.12.0'
