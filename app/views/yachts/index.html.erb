@@ -1,3 +1,6 @@
+<%= render 'shared/banner'  %>
+
+
 <% @yachts.each do |yacht| %>
  <%= yacht.name %>
  <%= link_to 'More info', yacht_path(yacht) %>
