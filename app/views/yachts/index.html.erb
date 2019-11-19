@@ -4,7 +4,11 @@
 
     <% @yachts.each do |yacht| %>
         <div class="card col-3 m-3">
-          <img src="https://www.latinexcursions.com/wp-content/uploads/2018/06/infinity3-.jpg" alt="" class="card-img">
+          <% if yacht.photo.attached? %>
+            <%= cl_image_tag yacht.photo.key, height: 200, width: 300, crop: :fill, class: "card-img" %>
+          <% else %>
+            <img src="https://www.latinexcursions.com/wp-content/uploads/2018/06/infinity3-.jpg" alt="" class="card-img">
+          <% end %>
           <div class="card-info h-100 p-3">
             <div class="card-info-row">
               <h3 class="m-0"><%= yacht.name %></h3>
@@ -23,3 +27,6 @@
     </div>
   </div>
 </div>
+
+
+
