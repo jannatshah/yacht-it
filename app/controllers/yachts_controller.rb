@@ -3,6 +3,16 @@ class YachtsController < ApplicationController
   before_action :find_yacht, only: [:show, :edit, :update]
   def index
     @yachts = Yacht.all
+
+    @yacht_locations = Yacht.geocoded # returns yachtlocations with coordinates
+
+    @markers = @yacht_locations.map do |yacht|
+      {
+        lat: yacht.latitude,
+        lng: yacht.longitude,
+        image_url: helpers.asset_url('yacht_icon.png')
+      }
+    end
   end
 
   def show; end
