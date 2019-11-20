@@ -1,6 +1,8 @@
-<h1>Summary of your booking</h1>
-<p>Start date: <%= @booking.start_date %></p>
-<p>End date: <%= @booking.end_date %></p>
-<p> Number of Nights: <%= (@booking.end_date - @booking.start_date).to_i  %></p>
-<p>Number of guests: <%= @booking.number_of_guests %></p>
-<p>Value of booking £: <%= @booking.yacht.price_per_night * (@booking.end_date - @booking.start_date + 1).to_i %></p>
+<div class="container">
+  <h1 class="my-3 text-center">Summary of your booking</h1>
+  <p>Start date: <%= @booking.start_date %></p>
+  <p>End date: <%= @booking.end_date %></p>
+  <p> Number of Nights: <%= (@booking.end_date - @booking.start_date).to_i  %></p>
+  <p>Number of guests: <%= @booking.number_of_guests %></p>
+  <p>Value of booking: £<%= @booking.yacht.price_per_night * (@booking.end_date - @booking.start_date + 1).to_i %></p>
+</div>
