@@ -32,3 +32,6 @@ end
 gem 'devise'
 gem 'validates_timeliness', '~> 5.0.0.alpha3'
 gem 'cloudinary', '~> 1.12.0'
+
+# Gemfile
+gem 'geocoder'
