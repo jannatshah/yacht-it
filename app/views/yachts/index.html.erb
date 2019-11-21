@@ -11,8 +11,14 @@
           <% end %>
           <div class="card-info px-3 py-2">
             <div class="card-info-row">
-              <span class="m-0"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+              <div class="rating">
+                 <% yacht.avg_reviews.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+              </div>
+
               <p class="fas fa-child m-0"> <%= yacht.capacity %></p>
+
             </div>
             <!-- <div class="card-info-row mt-2"> -->
               <h3 class="my-2"><%= yacht.name %></h3>
