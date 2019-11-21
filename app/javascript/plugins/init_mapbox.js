@@ -23,7 +23,7 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
 
-      // const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
       // Create a HTML element for your custom marker
       const element = document.createElement('div');
@@ -36,7 +36,7 @@ const initMapbox = () => {
     // Pass the element as an argument to the new marker
       new mapboxgl.Marker(element)
         .setLngLat([marker.lng, marker.lat])
-        // .setPopup(popup)
+        .setPopup(popup)
         .addTo(map);
     });
     fitMapToMarkers(map, markers);
