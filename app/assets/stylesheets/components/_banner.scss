@@ -2,11 +2,20 @@
   height: 500px;
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner input {
   width: 45%;
-  margin-top: 220px;
+  margin-top: 20px;
   opacity: .7;
   border-radius: 8px;
   padding: 8px;
+
+}
+
+.typed.scss {
+  color: white;
+  font: $main-h
 }
