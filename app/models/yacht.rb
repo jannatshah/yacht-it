@@ -9,4 +9,10 @@ class Yacht < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
+  def avg_reviews
+    return 0 if reviews.empty?
+
+    reviews.pluck(:rating).sum / reviews.size
+  end
 end
