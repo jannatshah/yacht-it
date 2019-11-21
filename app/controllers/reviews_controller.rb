@@ -17,6 +17,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
+    @yacht = @review.yacht
     redirect_to yacht_path(@yacht)
   end
 
