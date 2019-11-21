@@ -8,9 +8,8 @@
   <%= f.input :description %>
   <%= f.input :price_per_night %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <div class = "btn-create btn-lg w-100 text-center" >
-    <%= f.button :submit  %>
-  </div>
+  <%= f.button :submit, :class => "btn-create btn-lg w-100 text-center"  %>
+
 <% end %>
 
 
