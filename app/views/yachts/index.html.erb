@@ -7,7 +7,7 @@
           <% if yacht.photos.any? %>
             <%= cl_image_tag yacht.photos.first.key, height: 200, width: 300, crop: :fill, class: "card-img" %>
           <% else %>
-            <img src="https://www.latinexcursions.com/wp-content/uploads/2018/06/infinity3-.jpg" alt="" class="card-img">
+            <%= cl_image_tag( 'yacht_logo_lpxctu', height: 200, width: 300, crop: :fill, class: "card-img") %>
           <% end %>
           <div class="card-info px-3 py-2">
             <div class="card-info-row">
@@ -31,6 +31,7 @@
       <% end %>
     <% end %>
   <!-- </div> -->
+<!-- add a yacht button -->
 </div>
 <!-- map banner -->
 <div
@@ -43,3 +44,4 @@
 
 
 
+<button class="btn-add">+</button>
