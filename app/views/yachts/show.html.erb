@@ -58,7 +58,6 @@
   <div class = "d-flex my-3 justify-content-end" >
     <%= link_to 'Book now', new_yacht_booking_path(@yacht), class: 'btn-main' %>
     <%= link_to 'Edit', edit_yacht_path(@yacht), class: 'btn-secondary' %>
-    <%= link_to 'Back to yachts', yachts_path, class: 'btn-secondary' %>
     <%= link_to 'Add a Review', new_yacht_review_path(@yacht), class: 'btn-secondary' %>
   </div>
   <br>
@@ -82,7 +81,9 @@
         <i class="fas fa-star"></i>
       <% end %>
       <p>  <%= review.content  %> </p>
-      <%= button_to 'Delete Review', review_path(review), :method => 'delete', class: 'btn-delete'  %>
+      <%= link_to review_path(review), :method => 'delete', class: 'btn-delete' do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
       <br>
       <hr>
     <% end %>
