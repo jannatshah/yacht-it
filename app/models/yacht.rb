@@ -1,7 +1,8 @@
 class Yacht < ApplicationRecord
   has_many :bookings, dependent: :destroy
-  validates :name, presence: true, uniqueness: true, length: { minimum: 6 }
-  validates :capacity, presence: true
+  validates :name, presence: true, uniqueness: true, length: { minimum: 6, maximum: 16 }
+  validates :capacity, presence: true, numericality:
+  { only_integer: true, :greater_than_or_equal_to => 1 }
   validates :location, presence: true
   validates :price_per_night, presence: true
   has_many_attached :photos
