@@ -13,11 +13,7 @@
              <%= f.input :start_date %>
              <%= f.input :end_date %>
              <%= f.input :number_of_guests %>
-
-            <div class = "btn-create btn-lg w-100 text-center">
-            <%= f.button :submit %>
-           </div>
-
+             <%= f.button :submit, :class => "btn-create btn-lg w-100 text-center"%>
             <% end %>
 
         <p class="text-center"> <%= link_to 'Back', yachts_path %></p>
