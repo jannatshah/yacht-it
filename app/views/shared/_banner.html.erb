@@ -3,26 +3,28 @@
 
   <div class="container">
 
-      <div class = "col-14 text-center" >
-          <span id="banner-typed-text" class="display-3 text-center" font= 'Proza Libre', sans-serif;></span>
-          <span style="visibility:hidden;">|</span>
-      </div>
-
-     <div class="row">
-
-    <div class="col-12 text-center">
-      <table>
-                <%= form_tag root_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a yacht"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-      </table>
+    <div class = "col-14 text-center" >
+        <span id="banner-typed-text" class="display-3 text-center" font= 'Proza Libre', sans-serif;></span>
+        <span style="visibility:hidden;">|</span>
     </div>
-  </div>
+
+    <div class="row justify-content-center align-items-center">
+
+      <div class="col-8 d-flex text-center align-items-center">
+        <table>
+          <%= form_tag root_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a yacht",
+              class: 'search'
+            %>
+            <%= submit_tag "Search", class: "btn btn-main" %>
+          <% end %>
+        </table>
+
+      </div>
+    </div>
   </div>
 </div>
 
