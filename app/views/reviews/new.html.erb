@@ -11,7 +11,7 @@
 
             <div class="form-inputs">
              <%= f.input :content %>
-             <%= f.input :rating %>
+             <%= f.input :rating, :collection => [1, 2, 3, 4, 5] %>
 
             <div class = "btn-create btn-lg w-100 text-center">
             <%= f.button :submit %>
