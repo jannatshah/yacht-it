@@ -4,7 +4,6 @@
   border-radius: 50px;
   border: 0;
   color: $light;
-
 }
 
 .btn-secondary {
@@ -17,4 +16,8 @@
 
 .btn-delete {
   color: rgba($dark, .5);
+}
+
+.search {
+  flex-grow: 1;
 }

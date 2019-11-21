@@ -35,3 +35,4 @@ gem 'cloudinary', '~> 1.12.0'
 
 # Gemfile
 gem 'geocoder'
+gem "algoliasearch-rails"
