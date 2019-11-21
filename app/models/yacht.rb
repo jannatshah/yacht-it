@@ -9,4 +9,12 @@ class Yacht < ApplicationRecord
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+
+  include AlgoliaSearch
+  algoliasearch do
+      # list of attribute used to build an Algolia record
+      # attributes :name, :location, :description,
+      searchableAttributes ['name', 'location', 'unordered(description)']
+  end
+
 end

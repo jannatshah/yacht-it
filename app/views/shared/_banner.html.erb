@@ -12,7 +12,14 @@
 
     <div class="col-12 text-center">
       <table>
-        <input type="text">
+                <%= form_tag root_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a yacht"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
       </table>
     </div>
   </div>

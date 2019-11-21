@@ -5,7 +5,9 @@ class YachtsController < ApplicationController
     @yachts = Yacht.all
 
     @yacht_locations = Yacht.geocoded # returns yachtlocations with coordinates
-
+    if params[:query].present?
+      @yachts = Yacht.search(params[:query])
+    end
     @markers = @yacht_locations.map do |yacht|
       {
         lat: yacht.latitude,
