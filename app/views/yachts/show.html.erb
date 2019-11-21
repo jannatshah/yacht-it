@@ -59,6 +59,33 @@
     <%= link_to 'Book now', new_yacht_booking_path(@yacht), class: 'btn-main' %>
     <%= link_to 'Edit', edit_yacht_path(@yacht), class: 'btn-secondary' %>
     <%= link_to 'Back to yachts', yachts_path, class: 'btn-secondary' %>
+    <%= link_to 'Add a Review', new_yacht_review_path(@yacht), class: 'btn-secondary' %>
+  </div>
+
+  <div>
+    <% @reviews.each do |review| %>
+      <% if review.rating >= 1 %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% if review.rating >= 2 %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% if review.rating >= 3 %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% if review.rating >= 4 %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <% if review.rating == 5 %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <p>  <%= review.content  %> </p>
+      <%= button_to 'Delete Review', review_path(review), :method => 'delete', class: 'btn-delete'  %>
+      <br>
+      <hr>
+    <% end %>
+    <br>
+    <hr>
   </div>
 
 </div>
