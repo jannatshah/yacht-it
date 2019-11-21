@@ -16,7 +16,9 @@ class YachtsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @reviews = @yacht.reviews
+  end
 
   def new
     @yacht = Yacht.new
