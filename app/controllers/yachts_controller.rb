@@ -10,6 +10,7 @@ class YachtsController < ApplicationController
       {
         lat: yacht.latitude,
         lng: yacht.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { yacht: yacht }),
         image_url: helpers.asset_url('yacht_icon.png')
       }
     end
