@@ -8,10 +8,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 
 initMapbox();
 
-import '../components/algolia_form.js'
-
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
 
 
-//= require algolia/v3/algoliasearch.min
