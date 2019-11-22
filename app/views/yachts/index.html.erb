@@ -14,8 +14,12 @@
             <div class="card-info px-3 py-2">
               <div class="card-info-row">
                 <div class="rating">
+                  <% if yacht.avg_reviews == 0 %>
+                    <em><i class="fas fa-pencil-alt"></i> add first review</em>
+                  <% else %>
                    <% yacht.avg_reviews.times do %>
                   <i class="fas fa-star"></i>
+                <% end %>
                 <% end %>
                 </div>
 
