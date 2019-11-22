@@ -45,5 +45,4 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
-
-<%= link_to "+", new_yacht_path, class: "btn btn-add", 'data-animation' => "true", 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Add a Yacht!" %>
+<%= link_to "+", new_yacht_path, id:'add-yacht', class: "btn btn-add", data: { toggle: 'tooltip' } , title: "Add a Yacht!" %>
