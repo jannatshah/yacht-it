@@ -21,3 +21,23 @@
 .search {
   flex-grow: 1;
 }
+.btn-add {
+  border-radius: 50%;
+  border: 0;
+  background-color: $secondary;
+  background: linear-gradient(135deg, $secondary 0%, $secondary 100%);
+
+  color: $light;
+  // line-height: 0;
+  // padding: 16px;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  box-shadow: 0 4px 7px rgba(0,0,0,0.4);
+  z-index: 99;
+}
