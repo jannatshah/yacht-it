@@ -1,6 +1,6 @@
  <div class = "container">
-    <div class = "row justify-content-center log-in-form">
-      <div class="col-12 col-sm-6 pt-5">
+    <div class = "row justify-content-center align-items-center log-in-form">
+      <div class="col-12 col-sm-6 pt-5 ">
         <h2>Log in</h2>
 
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -16,9 +16,9 @@
           </div>
 
           <div class="form-actions">
-            <div class = "btn-create btn-lg w-100 text-center" >
-              <%= f.button :submit, "Log in" %>
-           </div>
+            <!-- <div class = "btn-create btn-lg w-100 text-center" > -->
+              <%= f.button :submit, "Log in", class: "btn-create btn-lg my-3 w-100 text-center"%>
+           <!-- </div> -->
           </div>
         <% end %>
 
