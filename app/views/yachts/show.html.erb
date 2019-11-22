@@ -63,6 +63,14 @@
   <br>
   <hr>
 
+  <h2>
+  <%= pluralize @reviews.size, "review" %>
+  </h2>
+
+  <% if @reviews.blank? %>
+    <h6> Be the first to leave a review for <%= @yacht.name %> </h6>
+  <% end %>
+
   <div>
     <% @reviews.each do |review| %>
       <% if review.rating >= 1 %>
