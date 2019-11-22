@@ -23,7 +23,7 @@
             <% if @yacht.photos.count > 3 %>
               <div class="col-6 small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @yacht.photos[3].key, :gravity=>"auto", :crop=>"fill" %>')"></div>
             <% else %>
-              <div class="col-6 small placeholder" style="background-image: url('<%= cl_image_path "yacht_logo_lpxctu" %>')"></div>
+              <div class="col-6 small placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "yacht_logo_lpxctu" %>')"></div>
             <% end %>
             <% if @yacht.photos.count > 4 %>
               <div class="col-6 small" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @yacht.photos[4].key, :gravity=>"auto", :crop=>"fill" %>')"></div>
