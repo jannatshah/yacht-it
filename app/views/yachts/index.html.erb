@@ -1,9 +1,9 @@
 <%= render 'shared/banner'  %>
-<div class="cards">
+<div class="cards row justify-content-center">
   <!-- <div class=""> -->
     <% @yachts.each do |yacht| %>
-       <%= link_to yacht_path(yacht), class: "card" do %>
-        <div>
+       <%= link_to yacht_path(yacht), class: "card col-12 col-md-6 col-lg-3 m-3" do %>
+        <div class="">
           <% if yacht.photos.any? %>
             <%= cl_image_tag yacht.photos.first.key, height: 200, width: 300, crop: :fill, class: "card-img" %>
           <% else %>
@@ -43,5 +43,6 @@
 ></div>
 
 
-
-<button class="btn-add">+</button>
+<!-- <span class="d-inline-block" data-toggle="tooltip" data-placement="top" title="Add a Yacht!"> -->
+<%= link_to "+", new_yacht_path, class: "btn btn-add", 'data-animation' => "true", 'data-toggle' => "tooltip", 'data-placement' => "top", title: "Add a Yacht!" %>
+<!-- </span> -->

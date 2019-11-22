@@ -4,7 +4,7 @@
         <% if @yacht.photos.count > 0 %>
           <div class="col-6 big" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @yacht.photos.first.key, :gravity=>"auto", :crop=>"fill" %>')"></div>
         <% else %>
-          <div class="col-6 big placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "https://res.cloudinary.com/da3nqylvf/image/upload/v1574334985/yacht_logo_lpxctu.png" %>')"></div>
+          <div class="col-6 big placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path "yacht_logo_lpxctu" %>')"></div>
         <% end %>
         <div class="col-6">
           <div class="row">
