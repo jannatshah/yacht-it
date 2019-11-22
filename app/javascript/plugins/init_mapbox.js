@@ -18,6 +18,8 @@ const initMapbox = () => {
       // style: 'mapbox://styles/mapbox/streets-v10'
     });
 
+    map.scrollZoom.disable();
+
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
                                     mapboxgl: mapboxgl }));
     const markers = JSON.parse(mapElement.dataset.markers);
