@@ -14,7 +14,7 @@ class Yacht < ApplicationRecord
   include AlgoliaSearch
   algoliasearch do
       # list of attribute used to build an Algolia record
-      # attributes :name, :location, :description,
+      # attributes :name, :location, :description
       searchableAttributes ['name', 'location', 'unordered(description)']
   end
 
